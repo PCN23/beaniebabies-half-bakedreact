@@ -4,19 +4,21 @@ import {
   Switch,
   Route,
 } from 'react-router-dom';
-import BeaniesPage from './BeaniesPage';
-import BeanieDetail from './BeanieDetail';
+import BeaniesPage from './BeaniesPage.js';
+import BeanieDetail from './BeanieDetail.js';
 
 export default function App() {
   return (
     <Router>
       <div className='App'>
         <Switch>
-          <Route>
+          <Route exact path="/">
+            <BeaniesPage />
             {/* this home page route should list all the beanies */}
           </Route>
-          <Route> 
-            {/* this route should point to a particulat beanie baby by id and render that specific BeanieDetail page */}
+          <Route exact path="/beanie/:id"> 
+            <BeanieDetail />
+            {/* this route should point to a particular beanie baby by id and render that specific BeanieDetail page */}
           </Route>
         </Switch>
       </div>
