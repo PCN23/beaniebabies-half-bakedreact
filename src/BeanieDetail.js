@@ -55,5 +55,3 @@ export default function BeanieDetail() {
 
 
 
-{/* Feel free to uncomment and use the below code--but you'll need to
-// figure out how to keep it from blowing up on load */}
