@@ -6,7 +6,10 @@ import BeaniesList from './BeaniesList';
 function App() {
   const [beanieBabies, setBeanieBabies] = useState([]);
   const [page, setPage] = useState(1);
+
   const perPage = 40;
+
+   
   
   useEffect(() => {
     async function fetch() {
@@ -18,11 +21,13 @@ function App() {
     }
 
     fetch();
-  }, []); // what can you do with this array to trigger a fetch every time the page changes?
+  }, [page]); // what can you do with this array to trigger a fetch every time the page changes?
 
+  const lastPage = Math.floor(beanieBabies / perPage);
+  console.log(beanieBabies);
   return (
     <>
-      <h2>Current Page {page}</h2>
+      
       <div className='buttons'>
         {/* on click, this button should decrement the page in state  */}
         {/* also, disable this button when you are on the first page */}
@@ -30,6 +35,7 @@ function App() {
         {/* on click, this button should increment the page in state  */}
         <button >Next Page</button>
       </div>
+      <BeaniesList beanies={beanieBabies}/>
       {/* pass the beanie babies into the BeaniesList component */}
     </>
   );
