@@ -18,16 +18,16 @@ body {
 }
 
 .beanie-baby .beanie-img {
-  width: 200px;
+  width: 125px;
 }
 
-.beanies {
+/* .beanies {
   text-align: center;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-}
+} */
 
 .beanie-detail {
   margin: 0 auto;
@@ -57,6 +57,9 @@ body {
 }
 
 .beanies {
+  text-align: center;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }

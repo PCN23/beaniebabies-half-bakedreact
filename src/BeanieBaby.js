@@ -2,11 +2,11 @@ import { Link } from 'react-router-dom';
 
 export default function BeanieBaby({ id, title, astroSign, image }) {
   return (
-    <Link to={`/beanie/${id}`}>
+    <Link className='beanie-baby'to={`/beanie/${id}`}>
       <div className='showing'>
         <h2>{title}</h2>
         <p>{astroSign}</p>
-        <img src={image}/>
+        <img className='beanie-img'src={image}/>
       </div>
     </Link>
     
