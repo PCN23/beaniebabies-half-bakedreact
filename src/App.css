@@ -37,12 +37,13 @@ body {
 
 .beanie-detail img {
   cursor: pointer;
-  width: 400px;
+  width: 200px;
 }
 
 .beanie-detail .beanie-data {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  
 }
 
 .beanie-detail .beanie-data p {
@@ -53,4 +54,9 @@ body {
   border-radius: 20px;
   margin: 10px;
   padding: 20px;
+}
+
+.beanies {
+  display: flex;
+  flex-wrap: wrap;
 }
